@@ -8,6 +8,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 2e0f7474bc54ab5489bffa55fe4405da
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: dd3a80b42bd3b5145837436e61a51c88
+  - enabled: 1
+    path: Assets/Scenes/UpgradesOverlay.unity
+    guid: cf293f5a9c6e7c448a45ef844e7f879f
+  - enabled: 1
+    path: Assets/Scenes/DialogueOverlay.unity
+    guid: 16fe99ff1c8c3dc498c2136d382297d5
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 7c85bf5ea58f7d047b362747600b4300
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 2053afe5ec57c7249b2f7a54f1c430d4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
