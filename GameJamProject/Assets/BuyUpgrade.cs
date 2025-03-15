@@ -38,8 +38,9 @@ public class BuyUpgrade : MonoBehaviour
     private MeterManager health, food, water, happiness;
 
     public GameObject money_storage, health_storage, food_storage, water_storage, happiness_storage, next_week;
-
+    public GameObject background;
     public AdvanceGameTime currTime;
+    public Flood flood_script;
     
     public Upgrade[] upgrade_table = {
         new Upgrade("Levee Construction", "Constructing a levee on rivers close to the town can help mitigate the effects of flooding in the longterm", 700, 0, 0, 0, 0),
@@ -72,6 +73,7 @@ public class BuyUpgrade : MonoBehaviour
         happiness_storage = GameObject.Find("Happiness Icon");
         money_storage = GameObject.Find("Money Symbol/Storage");
         next_week = GameObject.Find("Next_Week_Button_0");
+        background = GameObject.Find("CC_bg_0");
     
         monies = money_storage.GetComponent<MoneyManager>();
         health = health_storage.GetComponent<MeterManager>();
@@ -79,6 +81,7 @@ public class BuyUpgrade : MonoBehaviour
         water = water_storage.GetComponent<MeterManager>();
         happiness = happiness_storage.GetComponent<MeterManager>();
         currTime = next_week.GetComponent<AdvanceGameTime>();
+        flood_script = background.GetComponent<Flood>();
 
         currTime.time_advance.AddListener(ClearLocks);
 
@@ -106,6 +109,11 @@ public class BuyUpgrade : MonoBehaviour
             monies.money -= upgrade_table[upgrade_id].cost;
             upgrade_table[upgrade_id].bought = true;
             clicked = true;
+            if(upgrade_id == 0){
+                flood_script.LeveeCheck = true;
+            }else if(upgrade_id == 1){
+                flood_script.SandbagCheck = true;
+            }
         }
         //Button + upgrade also need to disappear
         //Or could just change it to a different button that has a checkmark or something

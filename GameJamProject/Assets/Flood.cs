@@ -3,25 +3,22 @@ using UnityEngine.SceneManagement;
 
 public class Flood : MonoBehaviour
 {
-    public GameObject next_week, upgrade_button;
-    public GameObject money_storage, health_storage, food_storage, water_storage, happiness_storage;
+    public GameObject next_week;
+    public GameObject health_storage, food_storage, water_storage, happiness_storage;
     public AdvanceGameTime currTime;
-    public BuyUpgrade upgrader;
     private MeterManager health, food, water, happiness;
-    bool LeveeCheck, SandbagCheck;
+    public bool LeveeCheck, SandbagCheck;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         next_week = GameObject.Find("Next_Week_Button_0");
-        upgrade_button = GameObject.Find("BuyButton0");
-        currTime = next_week.GetComponent<AdvanceGameTime>();
-        upgrader = upgrade_button.GetComponent<BuyUpgrade>();
-
         health_storage = GameObject.Find("Health Icon");
         food_storage = GameObject.Find("Food Icon");
         water_storage = GameObject.Find("Water Icon");
         happiness_storage = GameObject.Find("Happiness Icon");
+        currTime = next_week.GetComponent<AdvanceGameTime>();
+
 
         health = health_storage.GetComponent<MeterManager>();
         food = food_storage.GetComponent<MeterManager>();
@@ -32,12 +29,6 @@ public class Flood : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(upgrader.upgrade_table[0].bought){
-            LeveeCheck = true;
-        }
-        if(upgrader.upgrade_table[1].bought){
-            SandbagCheck = true;
-        }
         if(currTime.week == 4){
             SendFlood();
         }
