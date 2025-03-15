@@ -8,10 +8,12 @@ public class Flood : MonoBehaviour
     public AdvanceGameTime currTime;
     private MeterManager health, food, water, happiness;
     public bool LeveeCheck, SandbagCheck;
+    private bool flood_sent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        flood_sent = false;
         next_week = GameObject.Find("Next_Week_Button_0");
         health_storage = GameObject.Find("Health Icon");
         food_storage = GameObject.Find("Food Icon");
@@ -29,12 +31,13 @@ public class Flood : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currTime.week == 4){
+        if(currTime.week == 4 && flood_sent == false){
             SendFlood();
         }
     }
 
     void SendFlood(){
+        flood_sent = true;
         if(LeveeCheck && SandbagCheck){
             //really low impact from flood
             //health -5
