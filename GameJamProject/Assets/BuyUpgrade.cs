@@ -38,6 +38,12 @@ public class BuyUpgrade : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        health_storage = GameObject.Find("Health Icon");
+        food_storage = GameObject.Find("Food Icon");
+        water_storage = GameObject.Find("Water Icon");
+        happiness_storage = GameObject.Find("Happiness Icon");
+        money_storage = GameObject.Find("Money Symbol/Storage");
+    
         monies = money_storage.GetComponent<MoneyManager>();
         health = health_storage.GetComponent<MeterManager>();
         food = food_storage.GetComponent<MeterManager>();
