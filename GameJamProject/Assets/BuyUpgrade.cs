@@ -40,19 +40,24 @@ public class BuyUpgrade : MonoBehaviour
     private Upgrade[] upgrade_table = {
         new Upgrade("Rainfall Barrels", "Rainfall barrels help capture rainfall during the rarer, heavy rainfalls, so that there is increased water available during drought periods", 100, 0, 0, 15, 0),
         new Upgrade("Veterinary Supplies", "Additional veterinary supplies will help town farmers take care of their livestock, increasing food production", 250, 0, 15, 0, 0),
-        new Upgrade("Medical Supplies", "Medical supplies are necessary to help maintain the townspeople's health", 250, 15, 0, 0, 0)
+        new Upgrade("Medical Supplies", "Medical supplies are necessary to help maintain the townspeople's health", 250, 15, 0, 0, 0),
+        new Upgrade("Irrigation Canals", "Developing and maintaining irrigation canals will help distribute freshwater for crops, but reduce the amount of available water", 200, 0, 15, -5, 0)
     }; //this value will need to ba changed to keep up with number of upgrades
 
 
     //public TMP_Text name_text, description_text;
 
-    int upgrade_id;
+    public int upgrade_id;
 
-    bool clicked = false;
+    public bool clicked = false;
+
+    public int max_id;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        max_id = upgrade_table.Length;
+
         health_storage = GameObject.Find("Health Icon");
         food_storage = GameObject.Find("Food Icon");
         water_storage = GameObject.Find("Water Icon");
@@ -69,7 +74,7 @@ public class BuyUpgrade : MonoBehaviour
 
         //At the moment just grabs a random id from the list of upgrades - some of them need to have
         //additional qualifiers however + probably buckets of different costs
-        upgrade_id = (int)Random.Range(0, upgrade_table.Length);
+        upgrade_id = (int)Random.Range(0, max_id);
     }
 
     // Update is called once per frame
