@@ -13,6 +13,11 @@ public class MeterManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //value will need to be updated as the game goes on
+        //need to set limits on these values just to make sure that it doesn't break the meter spritesheets
+        if(value > 100){
+            value = 100;
+        }else if(value < 0){
+            value = 0;
+        }
     }
 }
