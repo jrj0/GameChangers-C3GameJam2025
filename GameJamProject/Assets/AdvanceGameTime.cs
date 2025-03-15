@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class AdvanceGameTime : MonoBehaviour
 {
 
-    int week;
+    public int week;
 
     public UnityEvent time_advance;
 

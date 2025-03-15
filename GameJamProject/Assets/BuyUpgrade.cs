@@ -5,7 +5,7 @@ using UnityEditor.Rendering.Universal;
 using UnityEngine;
 
 //This struct may need to be updated to account for additional effects (chance of flooding stuff)
-struct Upgrade {
+public struct Upgrade {
 
     public Upgrade(string name, string descript, int money, int health, int food, int water, int happy){
         Name = name;
@@ -41,11 +41,15 @@ public class BuyUpgrade : MonoBehaviour
 
     public AdvanceGameTime currTime;
     
-    private Upgrade[] upgrade_table = {
+    public Upgrade[] upgrade_table = {
+        new Upgrade("Levee Construction", "Constructing a levee on rivers close to the town can help mitigate the effects of flooding in the longterm", 700, 0, 0, 0, 0),
+        new Upgrade("Sandbags", "Adding sandbags along a river can help in case of a short term flooding event", 200, 0, 0, 0, 0),
         new Upgrade("Rainfall Barrels", "Rainfall barrels help capture rainfall during the rarer, heavy rainfalls, so that there is increased water available during drought periods", 100, 0, 0, 15, 0),
         new Upgrade("Veterinary Supplies", "Additional veterinary supplies will help town farmers take care of their livestock, increasing food production", 250, 0, 15, 0, 0),
         new Upgrade("Medical Supplies", "Medical supplies are necessary to help maintain the townspeople's health", 250, 15, 0, 0, 0),
-        new Upgrade("Irrigation Canals", "Developing and maintaining irrigation canals will help distribute freshwater for crops, but reduce the amount of available water", 200, 0, 15, -5, 0)
+        new Upgrade("Irrigation Canals", "Developing and maintaining irrigation canals will help distribute freshwater for crops, but reduce the amount of available water", 200, 0, 15, -5, 0),
+        new Upgrade("Increase Fertilizer Usage", "Fertilizer can help crops grow faster and be more productive, but it can also have negative effects on the water supply", 150, 0, 15, -5, 0),
+        new Upgrade("Increase Freshwater Storage", "Adding increased freshwater storage will help the town's water supply, but it may also limit how much water is immediately available for crops and animals", 150, 0, -5, 15, 0)
     }; //this value will need to ba changed to keep up with number of upgrades
 
 

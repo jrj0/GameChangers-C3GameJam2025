@@ -23,8 +23,14 @@ public class MeterUpdate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int step = 100 / 13;  //"maximum" value divided by number of sprites in spritesheet
+        int step = 100 / 14;  //"maximum" value divided by number of sprites in spritesheet
         int spriteNum = meterManage.value / step;
+
+        if(spriteNum > 13){
+            spriteNum = 13;
+        }else if(spriteNum < 0){
+            spriteNum = 0;
+        }
 
         testRenderer.sprite = spriteArray[spriteNum];
 
