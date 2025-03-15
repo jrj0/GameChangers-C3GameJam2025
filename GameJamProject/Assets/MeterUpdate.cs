@@ -27,5 +27,7 @@ public class MeterUpdate : MonoBehaviour
         int spriteNum = monies.money / step;
 
         testRenderer.sprite = spriteArray[spriteNum];
+        testRenderer.size = new Vector2(4, 4);
+
     }
 }
