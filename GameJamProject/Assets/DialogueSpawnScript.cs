@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class DialogueSpawnScript : MonoBehaviour
 {
     public GameObject bubble;
@@ -21,6 +20,7 @@ public class DialogueSpawnScript : MonoBehaviour
         else {
             GameObject clone = Instantiate(bubble, new Vector3(transform.position[0] - 3.5f, transform.position[1] + 0.5f, 0), transform.rotation);
             clone.transform.parent = transform;
+            //setText(clone);
             timer = 0;
         }
     }

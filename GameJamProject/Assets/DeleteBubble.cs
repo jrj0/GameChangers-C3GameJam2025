@@ -1,5 +1,5 @@
 using UnityEngine;
-using System;
+using TMPro;
 
 public class DeleteBubble : MonoBehaviour
 {
@@ -8,6 +8,13 @@ public class DeleteBubble : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //Dialogue options
+        string[] dialogues = {"Hello, my name is <b>Bob</b>!", "Hi, this is <b>Bob</b>", "Did you know that Bob wants veterinary supplies?"};
+
+        // Sets the text in the chatBubble prefab. chatBubble -> TextMeshPro
+        TextMeshPro textObject = GetComponentInChildren<TextMeshPro>();
+        string dialogue = dialogues[Random.Range(0, dialogues.Length)];
+        textObject.text = dialogue;
     }
 
     // Update is called once per frame
