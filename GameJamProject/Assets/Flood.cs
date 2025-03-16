@@ -9,6 +9,9 @@ public class Flood : MonoBehaviour
     private MeterManager health, food, water, happiness;
     public bool LeveeCheck, SandbagCheck;
     private bool flood_sent;
+    public Sprite[] bg_sprites; //4 background sprites of increasing darkness
+    int uhoh_thres, trouble_thres, dying_thres;
+    SpriteRenderer testRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +29,10 @@ public class Flood : MonoBehaviour
         food = food_storage.GetComponent<MeterManager>();
         water = water_storage.GetComponent<MeterManager>();
         happiness = happiness_storage.GetComponent<MeterManager>();
+        uhoh_thres = 40;
+        trouble_thres = 25;
+        dying_thres = 5;
+        testRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -34,6 +41,18 @@ public class Flood : MonoBehaviour
         if(currTime.week == 9 && flood_sent == false){
             SendFlood();
         }
+        if(health.value < dying_thres || food.value < dying_thres || water.value < dying_thres || happiness.value < dying_thres){
+            testRenderer.sprite = bg_sprites[3];
+        }else if(health.value < trouble_thres || food.value < trouble_thres || water.value < trouble_thres || happiness.value < trouble_thres){
+            testRenderer.sprite = bg_sprites[2];
+        }else if(health.value < uhoh_thres || food.value < uhoh_thres || water.value < uhoh_thres || happiness.value < uhoh_thres){
+            testRenderer.sprite = bg_sprites[1];
+        }else{
+            testRenderer.sprite = bg_sprites[0];
+        }
+        
+        
+        
     }
 
     void SendFlood(){
