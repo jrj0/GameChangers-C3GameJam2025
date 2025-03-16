@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 72b1eeba4e8e8f24d8c3a6119841bafa
+guid: 7527664489a5644f7a870f18638c7a40
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3420661106573913605
-    second: CC_sheep_0
+      213: 3763752930381237044
+    second: New Piskel (2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CC_sheep_0
+      name: New Piskel (2)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 120
-        height: 96
+        x: 76
+        y: 21
+        width: 222
+        height: 310
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf1daa5d8de5780d0800000000000000
-      internalID: -3420661106573913605
+      spriteID: 43b85b559598b3430800000000000000
+      internalID: 3763752930381237044
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      CC_sheep_0: -3420661106573913605
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
