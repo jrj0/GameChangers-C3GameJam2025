@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1916f0f9eea0d54468e4a5c59ed69a1d
+guid: 7aec2c9d900d72f408d86275d97aa2a5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9011780523053854224
-    second: Play_Button_0
+      213: -7015323035248984567
+    second: Home_Button_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Play_Button_0
+      name: Home_Button_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 96
+        width: 200
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f157995c59bfe280800000000000000
-      internalID: -9011780523053854224
+      spriteID: 90e7e534ed094ae90800000000000000
+      internalID: -7015323035248984567
       vertices: []
       indices: 
       edges: []
