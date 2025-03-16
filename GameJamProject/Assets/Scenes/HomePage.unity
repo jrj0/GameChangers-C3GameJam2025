@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 445846677}
   - component: {fileID: 445846675}
   - component: {fileID: 445846681}
+  - component: {fileID: 445846682}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -398,9 +399,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 445846681}
-        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 445846682}
+        m_TargetAssemblyTypeName: TutorialPageButton, Assembly-CSharp
+        m_MethodName: GoHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -458,6 +459,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b627ed44e5d38a44aed91eb8d66c469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &445846682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445846673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd418370be2bc4e21b435e768e31b5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &666570514
