@@ -9,6 +9,7 @@ public class MoneyManager : MonoBehaviour
     public GameObject next_week;
     public AdvanceGameTime currTime;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,9 +25,9 @@ public class MoneyManager : MonoBehaviour
         // when clicking on a different button, make money go down
     }
 
-    //Need to add 1000 dollars per week
+    //Need to add money per week
     //Subtract money when specific projects or upgrades are bought
     void AddMoney(){
-        money += 1000;
+        money += 400;
     }
 }
