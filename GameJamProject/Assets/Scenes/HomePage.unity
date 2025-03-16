@@ -401,7 +401,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 445846682}
         m_TargetAssemblyTypeName: TutorialPageButton, Assembly-CSharp
-        m_MethodName: GoHome
+        m_MethodName: GoToTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
