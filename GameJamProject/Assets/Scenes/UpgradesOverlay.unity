@@ -377,6 +377,7 @@ MonoBehaviour:
   upgrade_id3: 0
   clicked: 0
   max_id: 0
+  bought_item: {fileID: 8300000, guid: 780d12a900308d442813c862ff06d5fb, type: 3}
 --- !u!61 &222879979
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2000,6 +2001,7 @@ MonoBehaviour:
   upgrade_id3: 0
   clicked: 0
   max_id: 0
+  bought_item: {fileID: 8300000, guid: 780d12a900308d442813c862ff06d5fb, type: 3}
 --- !u!61 &1540230314
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2449,6 +2451,7 @@ MonoBehaviour:
   upgrade_id3: 0
   clicked: 0
   max_id: 0
+  bought_item: {fileID: 8300000, guid: 780d12a900308d442813c862ff06d5fb, type: 3}
 --- !u!212 &1932070795
 SpriteRenderer:
   m_ObjectHideFlags: 0

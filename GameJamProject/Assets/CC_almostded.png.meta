@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 8ccc9f897ffc84795b426ee9d29b27a6
+guid: 7d59a2856ea89224ea73faeab7d312e6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2373183141213679312
-    second: New Piskel (6)_0
-  - first:
-      213: 2692668872550476181
-    second: New Piskel (6)_1
+      213: -4617181271853291046
+    second: CC_almostded_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New Piskel (6)_0
+      name: CC_almostded_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 582
-        width: 396
-        height: 134
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0deacf64e7d3fe020800000000000000
-      internalID: 2373183141213679312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: New Piskel (6)_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 186
-        width: 396
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5996f1eb2184e5520800000000000000
-      internalID: 2692668872550476181
+      spriteID: ad9299b981a7cefb0800000000000000
+      internalID: -4617181271853291046
       vertices: []
       indices: 
       edges: []
@@ -172,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      New Piskel (6)_0: 2373183141213679312
-      New Piskel (6)_1: 2692668872550476181
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

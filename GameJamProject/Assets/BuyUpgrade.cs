@@ -54,7 +54,11 @@ public class BuyUpgrade : MonoBehaviour
         new Upgrade("Medical Supplies", "Medical supplies are necessary to help maintain the townspeople's health", 250, 15, 0, 0, 0),
         new Upgrade("Irrigation Canals", "Developing and maintaining irrigation canals will help distribute freshwater for crops, but reduce the amount of available water", 200, 0, 15, -5, 0),
         new Upgrade("Increase Fertilizer Usage", "Fertilizer can help crops grow faster and be more productive, but it can also have negative effects on the water supply", 150, 0, 15, -5, 0),
-        new Upgrade("Increase Freshwater Storage", "Adding increased freshwater storage will help the town's water supply, but it may also limit how much water is immediately available for crops and animals", 150, 0, -5, 15, 0)
+        new Upgrade("Increase Freshwater Storage", "Adding increased freshwater storage will help the town's water supply, but it may also limit how much water is immediately available for crops and animals", 150, 0, -5, 15, 0),
+        new Upgrade("Increase Pesticide Usage", "Pesticides reduce the amount of crops eaten by insects but seepes into the ground, contaminating groundwater", 150, 0, 20, -10, 0),
+        new Upgrade("Increase Cow Population", "Increase the food supply by increasing the cow population but more cows means more freshwater consumption", 150, 0, 10, -10, 0),
+        new Upgrade("Increase Sheep Population", "Increase the food supply by increasing the sheep population and obtain more wool but sheeps will require freshwater", 200, 0, 5, -10, 5),
+        new Upgrade("Solar Still", "Establish relatively cheap solar stills to harness solar distillation to slowly purify water", 100, 0, 0, 10, 0)
     }; //this value will need to ba changed to keep up with number of upgrades
 
 
@@ -67,6 +71,8 @@ public class BuyUpgrade : MonoBehaviour
     public bool clicked = false;
 
     public int max_id;
+
+    public AudioClip bought_item;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -123,6 +129,8 @@ public class BuyUpgrade : MonoBehaviour
             }else if(upgrade_id1 == 1){
                 flood_script.SandbagCheck = true;
             }
+            //From this forum post: https://discussions.unity.com/t/how-to-get-sound-effect-to-play-for-event/568366/5
+            AudioSource.PlayClipAtPoint(bought_item, transform.position);
         }
         //Button + upgrade also need to disappear
         //Or could just change it to a different button that has a checkmark or something

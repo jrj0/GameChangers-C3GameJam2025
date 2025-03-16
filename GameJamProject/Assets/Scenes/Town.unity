@@ -395,6 +395,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
+  next_week: {fileID: 0}
+  currTime: {fileID: 0}
 --- !u!1 &222643752
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +586,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
+  next_week: {fileID: 0}
+  currTime: {fileID: 0}
 --- !u!1 &264221552
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,6 +776,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
+  next_week: {fileID: 0}
+  currTime: {fileID: 0}
 --- !u!1 &411815932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,6 +1776,11 @@ MonoBehaviour:
   currTime: {fileID: 0}
   LeveeCheck: 0
   SandbagCheck: 0
+  bg_sprites:
+  - {fileID: 2734581582174376376, guid: f9fc6f37607521c4dbc3bafbaacda65c, type: 3}
+  - {fileID: 3530372559293752229, guid: 9854b5ab7bdff0443bfcbbb04fa67b2f, type: 3}
+  - {fileID: 4655937924396018100, guid: f38fdaf60f8ab4147b832776b66b3f6e, type: 3}
+  - {fileID: -4617181271853291046, guid: 7d59a2856ea89224ea73faeab7d312e6, type: 3}
 --- !u!1 &785262772
 GameObject:
   m_ObjectHideFlags: 0
@@ -4002,6 +4013,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
+  next_week: {fileID: 0}
+  currTime: {fileID: 0}
 --- !u!1 &2083021047
 GameObject:
   m_ObjectHideFlags: 0
