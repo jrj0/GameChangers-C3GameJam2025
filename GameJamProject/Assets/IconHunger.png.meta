@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f9fc6f37607521c4dbc3bafbaacda65c
+guid: 4d0459a932fdd44dc8cbe495c211065f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2734581582174376376
-    second: CC_bg_0
+      213: -1759372182834134246
+    second: IconHunger_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CC_bg_0
+      name: IconHunger_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b154d6e57f23f520800000000000000
-      internalID: 2734581582174376376
+      spriteID: a13c77e32547597e0800000000000000
+      internalID: -1759372182834134246
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      CC_bg_0: 2734581582174376376
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
