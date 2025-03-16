@@ -93,7 +93,7 @@ static class Beekeeper  {
         };
 
         string[] slightHintDialogue = new string[] {
-            "This too shall pass. I love this quote but maybe we can change something? I fear that this region is close to being devastated."
+            "This too shall pass. I love this quote but maybe we can change something? I fear that this region is close to being devastated.",
             "I've noticed recently that as a community, we are running low on freshwater. For this region, even a large surplus may not be enough."
         };
         randomizedDialogues.AddRange(basicDialogue);

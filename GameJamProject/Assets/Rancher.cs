@@ -64,7 +64,7 @@ static class Rancher  {
             "It's time for MOO-RNING song cows!",
             "Oh it's you. Would you like to help out with cow milking?",
             "COWS! Let's have a good milking session today!",
-            "Sometimes I like to stand at a mountain peak and echo my voice".
+            "Sometimes I like to stand at a mountain peak and echo my voice",
             "Many people know of my cows, but only a few can recall all of their names.",
             "Everyone here is kind. I hope that we can keep living here together.",
             "Let's see where the wind will take me today!"
@@ -94,7 +94,7 @@ static class Rancher  {
             "How are the bees Julia? But please don't bring them near me!",
             "Would you like to walk around sometime Julia? I have a couple errands to run.",
             "Hello there! Sorry, I forgot your name for a moment. Julia, right?"
-        }
+        };
 
         string[] slightHintDialogue = new string[] {
             "Unfortunately my cows are running low on water and so am I.",

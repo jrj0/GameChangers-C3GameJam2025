@@ -99,7 +99,7 @@ static class Shepherd  {
         };
         randomizedDialogues.AddRange(basicDialogue);
         randomizedDialogues.AddRange(javierDialogue);
-        randomizedDialogues.AddRange(pabloDialogue);
+        randomizedDialogues.AddRange(joaquinDialogue);
         randomizedDialogues.AddRange(alejandroDialogue);
         randomizedDialogues.AddRange(juliaDialogue);
         randomizedDialogues.AddRange(slightHintDialogue);
