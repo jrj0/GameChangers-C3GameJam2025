@@ -60,67 +60,42 @@ static class Shepherd  {
     // Should be called at the start of each week
     public static void setRandomizedDialogues() { //TODO Shepherd dialogue
         string[] basicDialogue = new string[] {
-            "Do you know Sam? I heard something not human used to live here...",
-            "Every morning I want to shout, 'Joaquín is ready for another day!'", 
-            "The weather seems to be getting worse...",
-            "I am very worried about my crops these days!",
-            "Did you know? My father was also a farmer!",
-            "Have you heard? My grandfather was a farmer!",
-            "Has anyone told you? My great-grandfather was a farmer!",
-            "Can you believe it? My family have been farmers for as long as I can remember!",
-            "I'll let you in on a secret...I started farming when I was just 5 years old!",
-            "My children want to be farmers too. Unfortunately, the climate is changing...",
-            "Is your study abroad going well? We don't get visitors often.",
-            "Thank you for your interest and passion in helping our humble town!",
-            "You should stop by my home for dinner sometime soon.",
-            "Have you eaten yet? Are you staying well?",
-            "An early morning to a late night outdoors is the best!",
-            "Are you getting enough outdoor time? If not, farm with me!",
-            "I don't know much about life outside of the Sierra Nevada, but I enjoy it here!",
-            "I'm glad that I learned English in my spare time, so that I could talk with you!",
-            "The early bird gets the worm!",
-            "The night owl is late to the harvest!",
-            "What's your favorite food? Let's have it together for dinner tonight!",
-            "My least favorite season? It's definitely winter.",
-
+            ".............................Oh, were you here the whole time?",
+            "Would you like to look at the sheep? They are kind.",
+            "I like the sheep because they are nice to me.",
+            "I don't think so.",
+            "I'd agree with that.",
+            "Maybe.",
+            "Sheep are wonderful creatures, right?",
+            "Sometimes, I don't know what to say.",
+            "Did you see it? A lamb was just born!",
+            "I'm a shepherd because I like being around sheep.",
+            "In my family, I'm the only shepherd."
         };
 
         string[] javierDialogue = new string[] {
-            "Have you seen Javier yet? He creates the best tools in this area!",
-            "Hey Javier, how are you doing today? I might need to upgrade my tools soon.",
-            "Javier! Just the person I wanted to see, I think I want a new tiller.",
-            "I haven't seen you in a couple days Javier. Make sure to go outside once in a while!",
-            "The annual festival is quickly approaching. Would you like to help Javier?"
+            "Your blacksmithing expertise impresses me Javier. You should teach a workshop sometime.",
+            "Hello Javier, I don't need anything at the moment.",
+            "Greetings Javier, I will likely contact you soon for an order."
         };
 
-        string[] pabloDialogue = new string[] {
-            "Have you met the Pablo the shepherd yet? His sheep usually prefer grazing wild plants...",
-            "Pablo, you've been doing great these days! Your sheep look very happy!",
-            "How are you doing on this fine day Pablo?",
-            "Pablo! It's almost time for the annual festival. Would you like to help?"
+        string[] joaquinDialogue = new string[] {
+            "Joaquín, your crops are really tasty but I guess my sheep don't like it."
         };
 
         string[] alejandroDialogue = new string[] {
-            "Have you talked to Alejandro the rancher yet? His cows love my crops!",
-            "Good day to you Alejandro! My children always enjoy your cows' fresh milk!",
-            "Hello Alejandro, would you like to help host the annual festival this year?"
+            "Alejandro, has anyone ever told you to lower your volume a little?",
+            "Hello Javier, we meet again. Even though you're a little loud, it's always nice to see you."
         };
 
         string[] juliaDialogue = new string[] {
-            "Have you spoken with Julia yet? Her bees help my crops from time to time!",
-            "Good day to you Julia! It's been awhile since I have seen you!",
-            "Would you like to come over sometime Julia? Make sure to bring your bees too!",
-            "Would you like to help with the festival this year Julia? Everyone always enjoys the presence of you and your bees!"
+            "Hello Julia, are you strolling around town again?",
+            "Julia, we meet again. This has happened a couple times right?"
         };
 
         string[] slightHintDialogue = new string[] {
-            "I would like fertilizer, but it's not good for our community right now.",
-            "Although I need water for my crops, the land tells me that we should invest more into having a surplus of water.",
-            "Come talk to me if you need help with anything! I know a lot about farming!",
-            "Life here is so nice! But the climate has changed so much recently, hopefully things get better!",
-            "I am a farmer so I love crops and we never run out of food! Our freshwater reserves seem to never be enough, though.",
-            "Everyone here really wants to protect our land, so make sure to give them a listen!",
-            "I heard a survey about our region was conducted recently! Expert researchers too, but I think our responses were more considerate."
+            "Hello Joaquín, have you noticed the water scarcity in recent times? I think we should be prepared.",
+            "My food supply looks a little low, but I should also make sure that I conserve water."
         };
         randomizedDialogues.AddRange(basicDialogue);
         randomizedDialogues.AddRange(javierDialogue);

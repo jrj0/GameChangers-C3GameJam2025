@@ -60,72 +60,51 @@ static class Rancher  {
     // Should be called at the start of each week
     public static void setRandomizedDialogues() { //TODO rancher dialogue
         string[] basicDialogue = new string[] {
-            "Do you know Sam? I heard something not human used to live here...",
-            "Every morning I want to shout, 'Joaquín is ready for another day!'", 
-            "The weather seems to be getting worse...",
-            "I am very worried about my crops these days!",
-            "Did you know? My father was also a farmer!",
-            "Have you heard? My grandfather was a farmer!",
-            "Has anyone told you? My great-grandfather was a farmer!",
-            "Can you believe it? My family have been farmers for as long as I can remember!",
-            "I'll let you in on a secret...I started farming when I was just 5 years old!",
-            "My children want to be farmers too. Unfortunately, the climate is changing...",
-            "Is your study abroad going well? We don't get visitors often.",
-            "Thank you for your interest and passion in helping our humble town!",
-            "You should stop by my home for dinner sometime soon.",
-            "Have you eaten yet? Are you staying well?",
-            "An early morning to a late night outdoors is the best!",
-            "Are you getting enough outdoor time? If not, farm with me!",
-            "I don't know much about life outside of the Sierra Nevada, but I enjoy it here!",
-            "I'm glad that I learned English in my spare time, so that I could talk with you!",
-            "The early bird gets the worm!",
-            "The night owl is late to the harvest!",
-            "What's your favorite food? Let's have it together for dinner tonight!",
-            "My least favorite season? It's definitely winter.",
+            ".........I DECLARE THAT TODAY WILL BE A GREAT DAY!",
+            "It's time for MOO-RNING song cows!",
+            "Oh it's you. Would you like to help out with cow milking?",
+            "COWS! Let's have a good milking session today!",
+            "Sometimes I like to stand at a mountain peak and echo my voice".
+            "Many people know of my cows, but only a few can recall all of their names.",
+            "Everyone here is kind. I hope that we can keep living here together.",
+            "Let's see where the wind will take me today!"
+
 
         };
 
-        string[] javierDialogue = new string[] {
-            "Have you seen Javier yet? He creates the best tools in this area!",
-            "Hey Javier, how are you doing today? I might need to upgrade my tools soon.",
-            "Javier! Just the person I wanted to see, I think I want a new tiller.",
-            "I haven't seen you in a couple days Javier. Make sure to go outside once in a while!",
-            "The annual festival is quickly approaching. Would you like to help Javier?"
+        string[] joaquinDialogue = new string[] {
+            "Hello again Jaiver. Would you like to trade some of your crops for fresh milk?",
+            "Javier, it's always nice to see you. I feel like you are our unofficial leader",
+            "Let's have a meal together sometime Javier."
         };
 
         string[] pabloDialogue = new string[] {
-            "Have you met the Pablo the shepherd yet? His sheep usually prefer grazing wild plants...",
-            "Pablo, you've been doing great these days! Your sheep look very happy!",
-            "How are you doing on this fine day Pablo?",
-            "Pablo! It's almost time for the annual festival. Would you like to help?"
+            "Pablo, we share so much in common as amazing livestock raisers, right?",
+            "You should really speak up sometimes Pablo! I don't hear you talk too much.",
+            "If you need a friend Pablo, how about you talk to the study abroad intern?"
         };
 
-        string[] alejandroDialogue = new string[] {
-            "Have you talked to Alejandro the rancher yet? His cows love my crops!",
-            "Good day to you Alejandro! My children always enjoy your cows' fresh milk!",
-            "Hello Alejandro, would you like to help host the annual festival this year?"
+        string[] javierDialogue = new string[] {
+            "Hello Javier! I apologize but I will pass on your offer today!",
+            "Hello again Javier! I might consider purchasing your offerings!",
+            "Hello once more Javier! I will strongly consider buying your offerings at this moment!"
         };
 
         string[] juliaDialogue = new string[] {
-            "Have you spoken with Julia yet? Her bees help my crops from time to time!",
-            "Good day to you Julia! It's been awhile since I have seen you!",
-            "Would you like to come over sometime Julia? Make sure to bring your bees too!",
-            "Would you like to help with the festival this year Julia? Everyone always enjoys the presence of you and your bees!"
-        };
+            "How are the bees Julia? But please don't bring them near me!",
+            "Would you like to walk around sometime Julia? I have a couple errands to run.",
+            "Hello there! Sorry, I forgot your name for a moment. Julia, right?"
+        }
 
         string[] slightHintDialogue = new string[] {
-            "I would like fertilizer, but it's not good for our community right now.",
-            "Although I need water for my crops, the land tells me that we should invest more into having a surplus of water.",
-            "Come talk to me if you need help with anything! I know a lot about farming!",
-            "Life here is so nice! But the climate has changed so much recently, hopefully things get better!",
-            "I am a farmer so I love crops and we never run out of food! Our freshwater reserves seem to never be enough, though.",
-            "Everyone here really wants to protect our land, so make sure to give them a listen!",
-            "I heard a survey about our region was conducted recently! Expert researchers too, but I think our responses were more considerate."
+            "Unfortunately my cows are running low on water and so am I.",
+            "Outsiders may believe that happiness and food are our greatest problems, but I actually think it's water.",
+            "Based off my observations, sandbags will be very important in the near future."
         };
         randomizedDialogues.AddRange(basicDialogue);
         randomizedDialogues.AddRange(javierDialogue);
         randomizedDialogues.AddRange(pabloDialogue);
-        randomizedDialogues.AddRange(alejandroDialogue);
+        randomizedDialogues.AddRange(joaquinDialogue);
         randomizedDialogues.AddRange(juliaDialogue);
         randomizedDialogues.AddRange(slightHintDialogue);
     }
