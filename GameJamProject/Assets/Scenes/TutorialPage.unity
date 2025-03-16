@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 489.289, y: 192.5604}
+  m_AnchoredPosition: {x: 7.844, y: -5.9756}
+  m_SizeDelta: {x: 704.7916, y: 410.2033}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66226365
 MonoBehaviour:
@@ -179,7 +179,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -213,7 +213,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textUI: {fileID: 66226365}
   typingSpeed: 0.05
-  fullText: SIGMA RIZZ FOR THE WIN. GET THOSE DUBS
+  fullText: Hey there! Thanks for participaiting in our environmental engineering
+    internship at Monachil. Locals have been concerned about the affects of climate
+    change, and we want to assist them the best we can. Your job is to construct
+    improvements and projects based on the villagers needs. Balance the factors of
+    the town to provide stability, and make sure to pay attention to what the villagers
+    say. Good Luck!
 --- !u!1 &249383070
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,8 +625,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -219.28168, y: 76.54199}
-  m_SizeDelta: {x: 615.5066, y: 287.6445}
+  m_AnchoredPosition: {x: -126.24701, y: 171.81842}
+  m_SizeDelta: {x: 801.5759, y: 478.1973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1074243430
 MonoBehaviour:
@@ -695,8 +700,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textUI: {fileID: 66226365}
   typingSpeed: 0.05
-  fullText: Hello! This is the tutorial text. Idk, I am skibbidi, bla bla bla. I
-    have rizz. The sigma rizz infact. Y'all are just betas.
+  fullText: Hey there! Thanks for participaiting in our environmental engineering
+    internship at Monachil. Locals have been concerned about the affects of climate
+    change, and we want to assist them the best we can. Your job is to construct
+    improvements and projects based on the villagers needs. Balance the factors of
+    the town to provide stability, and make sure to pay attention to what the villagers
+    say. Good Luck!
 --- !u!114 &1308716248
 MonoBehaviour:
   m_ObjectHideFlags: 0
