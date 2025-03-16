@@ -13,6 +13,9 @@ static class Rancher  {
     public static int waitClickCounter = 0;
     public static string[,] sequencedDialogue = new string[2,2];
     public static int dialogueNum = -1;
+    public static int rateLow = 15;
+    public static int rateHigh = 22;
+    public static int liveTime = 12;
     /*
     Encapsulation
 

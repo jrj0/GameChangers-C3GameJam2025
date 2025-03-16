@@ -13,6 +13,10 @@ static class Farmer  {
     public static int waitClickCounter = 0;
     public static string[,] sequencedDialogue = new string[2,2];
     public static int dialogueNum = -1;
+
+    public static int rateLow = 7;
+    public static int rateHigh = 8;
+    public static int liveTime = 5;
     /*
     Encapsulation
 
