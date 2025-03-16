@@ -74,6 +74,8 @@ public class BuyUpgrade : MonoBehaviour
 
     public AudioClip bought_item;
 
+    public int button_id;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -101,7 +103,11 @@ public class BuyUpgrade : MonoBehaviour
 
         //At the moment just grabs a random id from the list of upgrades - some of them need to have
         //additional qualifiers however + probably buckets of different costs
-        upgrade_id1 = (int)Random.Range(0, max_id);
+        if(button_id == 0){
+            upgrade_id1 = 1;
+        }else{
+            upgrade_id1 = (int)Random.Range(2, max_id);
+        }
         upgrade_id2 = button2_script.upgrade_id1;
         upgrade_id3 = button3_script.upgrade_id1;
     }
@@ -139,8 +145,16 @@ public class BuyUpgrade : MonoBehaviour
     void ClearLocks(){
         //clear ability to buy with this button and reroll id
         clicked = false;
-        while(upgrade_table[upgrade_id1].bought == true || (upgrade_id1 == upgrade_id2) || (upgrade_id1 == upgrade_id3)){
-            upgrade_id1 = (int)Random.Range(0, max_id);
+        if(button_id == 0){
+            if(!upgrade_table[1].bought){
+                upgrade_id1 = 1;
+            }else if(upgrade_table[1].bought && !upgrade_table[0].bought){
+                upgrade_id1 = 0;
+            }
+        }else{
+            while(upgrade_table[upgrade_id1].bought == true || (upgrade_id1 == upgrade_id2) || (upgrade_id1 == upgrade_id3)){
+                upgrade_id1 = (int)Random.Range(2, max_id);
+            }
         }
     }
 }

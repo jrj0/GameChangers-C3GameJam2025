@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MeterManager : MonoBehaviour
 {
@@ -30,5 +31,9 @@ public class MeterManager : MonoBehaviour
 
     void MeterDrop(){
         value -= 5; //drop each meter by 5 every week - this can increase or decrease for balancing
+        if(value <= 0){
+            SceneManager.LoadScene("LoseScreen");
+            SceneManager.UnloadSceneAsync("Town");
+        }
     }
 }
