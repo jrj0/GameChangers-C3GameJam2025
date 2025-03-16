@@ -95,7 +95,7 @@ static class Farmer  {
         };
 
         string[] pabloDialogue = new string[] {
-            "Have you met the Pablo the shepherd yet? His sheep usually prefer grazing wild plants...",
+            "Have you met Pablo the shepherd yet? His sheep usually prefer grazing wild plants...",
             "Pablo, you've been doing great these days! Your sheep look very happy!",
             "How are you doing on this fine day Pablo?",
             "Pablo! It's almost time for the annual festival. Would you like to help?"
