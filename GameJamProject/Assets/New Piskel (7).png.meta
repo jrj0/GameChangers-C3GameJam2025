@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: e362129bb68708f4dac8789bd8231d25
+guid: dd8ab3375c4dc43e5985fd85eaa07e7b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8071341548926859910
-    second: IconHeadphones_0
+      213: 4810702507026764722
+    second: New Piskel (7)_0
+  - first:
+      213: 226647019809873599
+    second: New Piskel (7)_1
+  - first:
+      213: -7198345155242531674
+    second: New Piskel (7)_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IconHeadphones_0
+      name: New Piskel (7)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 40
-        height: 38
+        y: 582
+        width: 792
+        height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68af2acff5a230070800000000000000
-      internalID: 8071341548926859910
+      spriteID: 2b35963217c03c240800000000000000
+      internalID: 4810702507026764722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel (7)_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 186
+        width: 386
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe1b218346352300800000000000000
+      internalID: 226647019809873599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: New Piskel (7)_2
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 186
+        width: 354
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a46d1348375a1c90800000000000000
+      internalID: -7198345155242531674
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IconHeadphones_0: 8071341548926859910
+      New Piskel (7)_0: 4810702507026764722
+      New Piskel (7)_1: 226647019809873599
+      New Piskel (7)_2: -7198345155242531674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

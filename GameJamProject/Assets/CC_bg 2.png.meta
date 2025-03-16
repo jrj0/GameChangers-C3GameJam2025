@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e362129bb68708f4dac8789bd8231d25
+guid: c11e6587d6f384d11ac0698efba12854
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8071341548926859910
-    second: IconHeadphones_0
+      213: 3422635027362453405
+    second: CC_bg 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IconHeadphones_0
+      name: CC_bg 2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 40
-        height: 38
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68af2acff5a230070800000000000000
-      internalID: 8071341548926859910
+      spriteID: d979fb96c64af7f20800000000000000
+      internalID: 3422635027362453405
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      IconHeadphones_0: 8071341548926859910
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
