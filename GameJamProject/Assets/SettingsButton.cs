@@ -7,4 +7,9 @@ public class SettingsButton : MonoBehaviour
     {
         SceneManager.LoadScene("SettingsScreen");
     }
+
+    public void OnMouseDown()
+    {
+        SceneManager.LoadScene("SettingsScreen");
+    }
 }

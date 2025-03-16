@@ -41,6 +41,7 @@ public class DialogueSpawnScript : MonoBehaviour
         }
         else {
             GameObject clone = Instantiate(bubble, transform);
+            //clone.layer = 7; //should be above all the other stuff then
             timer = 0;
         }
     }

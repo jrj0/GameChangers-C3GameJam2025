@@ -10,6 +10,7 @@ public class MoneyDisplay : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        money_storage = GameObject.Find("Money Symbol/Storage");
         monies = money_storage.GetComponent<MoneyManager>();
     }
 
