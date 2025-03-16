@@ -45,6 +45,8 @@ public class BuyUpgrade : MonoBehaviour
     public Flood flood_script;
 
     public TMP_Text upgrade1desc, upgrade1name, upgrade1cost;
+
+    public AudioManager audioManager;
     
     public Upgrade[] upgrade_table = {
         new Upgrade("Levee Construction", "Constructing a levee on rivers close to the town can help mitigate the effects of flooding in the longterm", 700, 0, 0, 0, 0),
@@ -89,6 +91,8 @@ public class BuyUpgrade : MonoBehaviour
         currTime = next_week.GetComponent<AdvanceGameTime>();
         flood_script = background.GetComponent<Flood>();
 
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
         currTime.time_advance.AddListener(ClearLocks);
 
         //Need to do a lot of work with this to properly import all of the content + generate ids well
@@ -109,6 +113,7 @@ public class BuyUpgrade : MonoBehaviour
     }
 
     void OnMouseDown(){
+
         //Need to identify the requirements for each upgrade to appear
         if(monies.money >= upgrade_table[upgrade_id1].cost && upgrade_table[upgrade_id1].bought == false && clicked == false){
             health.value += upgrade_table[upgrade_id1].health_effect;
@@ -124,6 +129,10 @@ public class BuyUpgrade : MonoBehaviour
                 flood_script.SandbagCheck = true;
             }
         }
+
+        //play SFX for button press
+        audioManager.PlaySFX(audioManager.buttonLarge);
+        
         //Button + upgrade also need to disappear
         //Or could just change it to a different button that has a checkmark or something
     }
