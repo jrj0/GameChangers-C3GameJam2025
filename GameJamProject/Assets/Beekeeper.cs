@@ -60,73 +60,47 @@ static class Beekeeper  {
     // Should be called at the start of each week
     public static void setRandomizedDialogues() { //TODO Beekeeper dialogue
         string[] basicDialogue = new string[] {
-            "Do you know Sam? I heard something not human used to live here...",
-            "Every morning I want to shout, 'Joaquín is ready for another day!'", 
-            "The weather seems to be getting worse...",
-            "I am very worried about my crops these days!",
-            "Did you know? My father was also a farmer!",
-            "Have you heard? My grandfather was a farmer!",
-            "Has anyone told you? My great-grandfather was a farmer!",
-            "Can you believe it? My family have been farmers for as long as I can remember!",
-            "I'll let you in on a secret...I started farming when I was just 5 years old!",
-            "My children want to be farmers too. Unfortunately, the climate is changing...",
-            "Is your study abroad going well? We don't get visitors often.",
-            "Thank you for your interest and passion in helping our humble town!",
-            "You should stop by my home for dinner sometime soon.",
-            "Have you eaten yet? Are you staying well?",
-            "An early morning to a late night outdoors is the best!",
-            "Are you getting enough outdoor time? If not, farm with me!",
-            "I don't know much about life outside of the Sierra Nevada, but I enjoy it here!",
-            "I'm glad that I learned English in my spare time, so that I could talk with you!",
-            "The early bird gets the worm!",
-            "The night owl is late to the harvest!",
-            "What's your favorite food? Let's have it together for dinner tonight!",
-            "My least favorite season? It's definitely winter.",
+            "Today seems to be a peaceful day. Do you want to relax with me and the bees?",
+            "Spring is my favorite season because the bees help produce such wonderful flowers!",
+            "Did you know that honey is one of the few foods that never expire?",
+            "Just living in the mountains with my bees makes me happy. I don't need anything else.",
+            "You asked if I prefer bees or people? Honestly...wait one moment, my bees need me.",
+            "Every morning I like walking around town and along the river.",
+            "As a child, I used to run around a lot more than now, but I still love nature just as much.",
+            "So far, this season has been much worse than previous years.",
+            "Do you know about the butterfly effect? If one drop of water falls into a lake will anyone notice? I personally think someone will notice.",
 
         };
 
         string[] javierDialogue = new string[] {
-            "Have you seen Javier yet? He creates the best tools in this area!",
-            "Hey Javier, how are you doing today? I might need to upgrade my tools soon.",
-            "Javier! Just the person I wanted to see, I think I want a new tiller.",
-            "I haven't seen you in a couple days Javier. Make sure to go outside once in a while!",
-            "The annual festival is quickly approaching. Would you like to help Javier?"
+            "Hello Javier. I hope you are doing well and I do apologize if my bees have been causing trouble.",
+            "Javier, I would like to place a request for a custom water can."
         };
 
         string[] pabloDialogue = new string[] {
-            "Have you met the Pablo the shepherd yet? His sheep usually prefer grazing wild plants...",
-            "Pablo, you've been doing great these days! Your sheep look very happy!",
-            "How are you doing on this fine day Pablo?",
-            "Pablo! It's almost time for the annual festival. Would you like to help?"
+            "Hello Pablo! Would you like to accompany me sometime? I always appreciate your presenece.",
+            "Pablo, have you talked to the study abroad intern? This intern is a great person and very enthusiastic!"
         };
 
         string[] alejandroDialogue = new string[] {
-            "Have you talked to Alejandro the rancher yet? His cows love my crops!",
-            "Good day to you Alejandro! My children always enjoy your cows' fresh milk!",
-            "Hello Alejandro, would you like to help host the annual festival this year?"
+            "Can you keep the volume down a little Alejandro? I am trying to enjoy my quiet time in nature.",
+            "Yes, once again Alejandro, my name is Julia."
         };
 
-        string[] juliaDialogue = new string[] {
-            "Have you spoken with Julia yet? Her bees help my crops from time to time!",
-            "Good day to you Julia! It's been awhile since I have seen you!",
-            "Would you like to come over sometime Julia? Make sure to bring your bees too!",
-            "Would you like to help with the festival this year Julia? Everyone always enjoys the presence of you and your bees!"
+        string[] joaquinDialogue = new string[] {
+            "Joaquín, may I bring my bees with me next time? I think they will do wonders for your crops.",
+            "Are you helping to host another event Joaquín? I would love to help!"
         };
 
         string[] slightHintDialogue = new string[] {
-            "I would like fertilizer, but it's not good for our community right now.",
-            "Although I need water for my crops, the land tells me that we should invest more into having a surplus of water.",
-            "Come talk to me if you need help with anything! I know a lot about farming!",
-            "Life here is so nice! But the climate has changed so much recently, hopefully things get better!",
-            "I am a farmer so I love crops and we never run out of food! Our freshwater reserves seem to never be enough, though.",
-            "Everyone here really wants to protect our land, so make sure to give them a listen!",
-            "I heard a survey about our region was conducted recently! Expert researchers too, but I think our responses were more considerate."
+            "This too shall pass. I love this quote but maybe we can change something? I fear that this region is close to being devastated."
+            "I've noticed recently that as a community, we are running low on freshwater. For this region, even a large surplus may not be enough."
         };
         randomizedDialogues.AddRange(basicDialogue);
         randomizedDialogues.AddRange(javierDialogue);
         randomizedDialogues.AddRange(pabloDialogue);
         randomizedDialogues.AddRange(alejandroDialogue);
-        randomizedDialogues.AddRange(juliaDialogue);
+        randomizedDialogues.AddRange(joaquinDialogue);
         randomizedDialogues.AddRange(slightHintDialogue);
     }
 }

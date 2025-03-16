@@ -58,72 +58,54 @@ static class Blacksmith  {
     }
 
     // Should be called at the start of each week
-    public static void setRandomizedDialogues() { //TODO Blacksmith dialogue
+    public static void setRandomizedDialogues() {
         string[] basicDialogue = new string[] {
-            "Do you know Sam? I heard something not human used to live here...",
-            "Every morning I want to shout, 'Joaquín is ready for another day!'", 
-            "The weather seems to be getting worse...",
-            "I am very worried about my crops these days!",
-            "Did you know? My father was also a farmer!",
-            "Have you heard? My grandfather was a farmer!",
-            "Has anyone told you? My great-grandfather was a farmer!",
-            "Can you believe it? My family have been farmers for as long as I can remember!",
-            "I'll let you in on a secret...I started farming when I was just 5 years old!",
-            "My children want to be farmers too. Unfortunately, the climate is changing...",
-            "Is your study abroad going well? We don't get visitors often.",
-            "Thank you for your interest and passion in helping our humble town!",
-            "You should stop by my home for dinner sometime soon.",
-            "Have you eaten yet? Are you staying well?",
-            "An early morning to a late night outdoors is the best!",
-            "Are you getting enough outdoor time? If not, farm with me!",
-            "I don't know much about life outside of the Sierra Nevada, but I enjoy it here!",
-            "I'm glad that I learned English in my spare time, so that I could talk with you!",
-            "The early bird gets the worm!",
-            "The night owl is late to the harvest!",
-            "What's your favorite food? Let's have it together for dinner tonight!",
-            "My least favorite season? It's definitely winter.",
+            "For the best tools near Sierra Mountain, come to me.",
+            "Can I interest you in my handmade hammer? It's made of the best materials and with masterful techniques.",
+            "I am content just working at my workshop all day.",
+            "Have you met all the townsfolk yet? I'm sure that you will find all of us favorable.",
+            "I enjoy living in the mountains...it's unfortunate that the climate is getting worse.",
+            "Tools are important. They enable humans to become super.",
+            "Have you walked around town yet? There are many beautiful details or so I hear.",
+            "Do you know what cascading means? For tools, a small chip can easily lead to larger damages.",
+            "Thanks for your interest in our town. Your help means a lot to all of us!",
+            "This town's children are nice, but I don't interact with them too much.",
+            "The waterfall's sounds are nice. I would like to hear it while working.",
+            "Did you break any tool? Let me analyze and repair it.",
+            "Every day you should work hard and strike while the iron is hot."
 
         };
 
-        string[] javierDialogue = new string[] {
-            "Have you seen Javier yet? He creates the best tools in this area!",
-            "Hey Javier, how are you doing today? I might need to upgrade my tools soon.",
-            "Javier! Just the person I wanted to see, I think I want a new tiller.",
-            "I haven't seen you in a couple days Javier. Make sure to go outside once in a while!",
-            "The annual festival is quickly approaching. Would you like to help Javier?"
+        string[] joaquinDialogue = new string[] {
+             "Joaquín, it's nice to see you! You're one of my best customers!",
+             "We see each other again neighbor! Maybe you're close to making another order?",
+             "Do you think the people in this town will be interested in a forging workshop Joaquín?",
+
         };
 
         string[] pabloDialogue = new string[] {
-            "Have you met the Pablo the shepherd yet? His sheep usually prefer grazing wild plants...",
-            "Pablo, you've been doing great these days! Your sheep look very happy!",
-            "How are you doing on this fine day Pablo?",
-            "Pablo! It's almost time for the annual festival. Would you like to help?"
+            "Pablo, let me know if you ever need one of my tools.",
+            "I respect your hard work and talent Pablo.",
+            "Pablo, have you talked to the study abroad intern yet?"
         };
 
         string[] alejandroDialogue = new string[] {
-            "Have you talked to Alejandro the rancher yet? His cows love my crops!",
-            "Good day to you Alejandro! My children always enjoy your cows' fresh milk!",
-            "Hello Alejandro, would you like to help host the annual festival this year?"
+            "Alejandro, can you try quieting the cows? They are distracting me from my work.",
+            "Can you refrain from shouting Alejandro? Smithing requires intense concentration.",
+            "Hello Pablo, it's been awhile. Have you been tending to the cows since early morning?"
         };
 
         string[] juliaDialogue = new string[] {
-            "Have you spoken with Julia yet? Her bees help my crops from time to time!",
-            "Good day to you Julia! It's been awhile since I have seen you!",
-            "Would you like to come over sometime Julia? Make sure to bring your bees too!",
-            "Would you like to help with the festival this year Julia? Everyone always enjoys the presence of you and your bees!"
+            "Julia, thank you for coming to visit without your bees. Their buzzing noises can be distracting.",
+            "Thanks to your bees Julia, the town is a lot livelier."
         };
 
         string[] slightHintDialogue = new string[] {
-            "I would like fertilizer, but it's not good for our community right now.",
-            "Although I need water for my crops, the land tells me that we should invest more into having a surplus of water.",
-            "Come talk to me if you need help with anything! I know a lot about farming!",
-            "Life here is so nice! But the climate has changed so much recently, hopefully things get better!",
-            "I am a farmer so I love crops and we never run out of food! Our freshwater reserves seem to never be enough, though.",
-            "Everyone here really wants to protect our land, so make sure to give them a listen!",
-            "I heard a survey about our region was conducted recently! Expert researchers too, but I think our responses were more considerate."
+            "I heard about a survey where experts said the Sierra Mountain region struggles with crops, but I think others in this community have a different opinion.",
+            "Even though I don't know much about climate change, I know it's affecting Monachil and it's getting worse."
         };
         randomizedDialogues.AddRange(basicDialogue);
-        randomizedDialogues.AddRange(javierDialogue);
+        randomizedDialogues.AddRange(joaquinDialogue);
         randomizedDialogues.AddRange(pabloDialogue);
         randomizedDialogues.AddRange(alejandroDialogue);
         randomizedDialogues.AddRange(juliaDialogue);
