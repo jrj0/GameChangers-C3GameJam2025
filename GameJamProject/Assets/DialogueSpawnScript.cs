@@ -19,7 +19,7 @@ public class DialogueSpawnScript : MonoBehaviour
         }
         else {
             Vector2 clone_size = GetComponentInChildren<SpriteRenderer>().GetComponent<Renderer>().bounds.size;
-            Vector2 parent_size = gameObject.GetComponentInChildren<Renderer>().bounds.size / 2;
+            Vector2 parent_size = gameObject.GetComponentInChildren<Renderer>().bounds.size;
             GameObject clone = CreateChatBubble(new Vector3(transform.position[0] - parent_size[0], transform.position[1] + parent_size[1], 0));
             clone.transform.parent = transform;
             timer = 0;
@@ -27,6 +27,8 @@ public class DialogueSpawnScript : MonoBehaviour
     }
 
     GameObject CreateChatBubble(Vector3 size) {
-        return Instantiate(bubble, size, transform.rotation);
+        GameObject clone = Instantiate(bubble, size, transform.rotation);
+        clone.GetComponent<ChatBubble>().dialogues = new string[]{"hello", "bye"};
+        return clone;
     }
 }

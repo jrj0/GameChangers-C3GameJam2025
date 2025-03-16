@@ -1,19 +1,17 @@
 using UnityEngine;
 using TMPro;
 
-public class DeleteBubble : MonoBehaviour
+public class ChatBubble : MonoBehaviour
 {
     private float timer = 0;
     private const int LIVETIME = 1;
-    //private int lineWidth = 5;
-    //private int numberOfLines = 1;
     private const int MAXLINEWIDTH = 0;
+    public string[] dialogues;
     public Vector2 size;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //Dialogue options
-        string[] dialogues = {"small-test", "medium-test afeiofjowjweifj", "large-testj oifjow eao;jew;jf woeijfohweoughouwarghjwoiejfiohgo;awehoifj eowhgowrefj ;iewo;aijfgoi s;gilo ruwajfoiejoaw;oisdfjcldjksbnvdjkfnzxvcwalkejtuhto;faieljfakwjdnsj"};
 
         // Sets the text in the chatBubble prefab. chatBubble -> TextMeshPro
         TextMeshPro textObject = GetComponentInChildren<TextMeshPro>();
