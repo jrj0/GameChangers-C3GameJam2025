@@ -45,20 +45,22 @@ public class BuyUpgrade : MonoBehaviour
     public Flood flood_script;
 
     public TMP_Text upgrade1desc, upgrade1name, upgrade1cost;
+
+    public AudioManager audioManager;
     
     public Upgrade[] upgrade_table = {
-        new Upgrade("Levee Construction", "Constructing a levee on rivers close to the town can help mitigate the effects of flooding in the longterm", 700, 0, 0, 0, 0),
-        new Upgrade("Sandbags", "Adding sandbags along a river can help in case of a short term flooding event", 200, 0, 0, 0, 0),
-        new Upgrade("Rainfall Barrels", "Rainfall barrels help capture rainfall during the rarer, heavy rainfalls, so that there is increased water available during drought periods", 100, 0, 0, 15, 0),
-        new Upgrade("Veterinary Supplies", "Additional veterinary supplies will help town farmers take care of their livestock, increasing food production", 250, 0, 15, 0, 0),
-        new Upgrade("Medical Supplies", "Medical supplies are necessary to help maintain the townspeople's health", 250, 15, 0, 0, 0),
-        new Upgrade("Irrigation Canals", "Developing and maintaining irrigation canals will help distribute freshwater for crops, but reduce the amount of available water", 200, 0, 15, -5, 0),
-        new Upgrade("Increase Fertilizer Usage", "Fertilizer can help crops grow faster and be more productive, but it can also have negative effects on the water supply", 150, 0, 15, -5, 0),
-        new Upgrade("Increase Freshwater Storage", "Adding increased freshwater storage will help the town's water supply, but it may also limit how much water is immediately available for crops and animals", 150, 0, -5, 15, 0),
-        new Upgrade("Increase Pesticide Usage", "Pesticides reduce the amount of crops eaten by insects but seepes into the ground, contaminating groundwater", 150, 0, 20, -10, 0),
-        new Upgrade("Increase Cow Population", "Increase the food supply by increasing the cow population but more cows means more freshwater consumption", 150, 0, 10, -10, 0),
-        new Upgrade("Increase Sheep Population", "Increase the food supply by increasing the sheep population and obtain more wool but sheeps will require freshwater", 200, 0, 5, -10, 5),
-        new Upgrade("Solar Still", "Establish relatively cheap solar stills to harness solar distillation to slowly purify water", 100, 0, 0, 10, 0)
+        new Upgrade("Levee Construction", "Constructing a levee on rivers close to the town can help mitigate the effects of flooding in the longterm", 700, 0, 0, 0, 5),
+        new Upgrade("Sandbags", "Adding sandbags along a river can help in case of a short term flooding event", 200, 0, 0, 0, 10),
+        new Upgrade("Rainfall Barrels", "Rainfall barrels help capture rainfall during the rarer, heavy rainfalls, so that there is increased water available during drought periods", 100, 0, 0, 15, 5),
+        new Upgrade("Veterinary Supplies", "Additional veterinary supplies will help town farmers take care of their livestock, increasing food production", 250, 0, 15, 0, 5),
+        new Upgrade("Medical Supplies", "Medical supplies are necessary to help maintain the townspeople's health", 250, 15, 0, 0, 5),
+        new Upgrade("Irrigation Canals", "Developing and maintaining irrigation canals will help distribute freshwater for crops, but reduce the amount of available water", 200, 0, 15, -5, 5),
+        new Upgrade("Increase Fertilizer Usage", "Fertilizer can help crops grow faster and be more productive, but it can also have negative effects on the water supply", 150, 0, 15, -5, 5),
+        new Upgrade("Increase Freshwater Storage", "Adding increased freshwater storage will help the town's water supply, but it may also limit how much water is immediately available for crops and animals", 150, 0, -5, 15, 5),
+        new Upgrade("Increase Pesticide Usage", "Pesticides reduce the amount of crops eaten by insects but seepes into the ground, contaminating groundwater", 150, 0, 20, -10, 5),
+        new Upgrade("Increase Cow Population", "Increase the food supply by increasing the cow population but more cows means more freshwater consumption", 150, 0, 10, -10, 5),
+        new Upgrade("Increase Sheep Population", "Increase the food supply by increasing the sheep population and obtain more wool but sheeps will require freshwater", 200, 0, 5, -10, 10),
+        new Upgrade("Solar Still", "Establish relatively cheap solar stills to harness solar distillation to slowly purify water", 100, 0, 0, 15, 5)
     }; //this value will need to ba changed to keep up with number of upgrades
 
 
@@ -97,6 +99,8 @@ public class BuyUpgrade : MonoBehaviour
         currTime = next_week.GetComponent<AdvanceGameTime>();
         flood_script = background.GetComponent<Flood>();
 
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
         currTime.time_advance.AddListener(ClearLocks);
 
         //Need to do a lot of work with this to properly import all of the content + generate ids well
@@ -104,7 +108,16 @@ public class BuyUpgrade : MonoBehaviour
         //At the moment just grabs a random id from the list of upgrades - some of them need to have
         //additional qualifiers however + probably buckets of different costs
         if(button_id == 0){
-            upgrade_id1 = 1;
+            if(!flood_script.SandbagCheck){
+                upgrade_id1 = 1;
+            }else if(flood_script.SandbagCheck && !flood_script.LeveeCheck){
+                upgrade_id1 = 0;
+            }else{
+                upgrade_id1 = (int)Random.Range(2, max_id);
+                while(upgrade_table[upgrade_id1].bought == true || (upgrade_id1 == upgrade_id2) || (upgrade_id1 == upgrade_id3)){
+                    upgrade_id1 = (int)Random.Range(2, max_id);
+                }
+            }
         }else{
             upgrade_id1 = (int)Random.Range(2, max_id);
         }
@@ -121,6 +134,7 @@ public class BuyUpgrade : MonoBehaviour
     }
 
     void OnMouseDown(){
+
         //Need to identify the requirements for each upgrade to appear
         if(monies.money >= upgrade_table[upgrade_id1].cost && upgrade_table[upgrade_id1].bought == false && clicked == false){
             health.value += upgrade_table[upgrade_id1].health_effect;
@@ -138,6 +152,10 @@ public class BuyUpgrade : MonoBehaviour
             //From this forum post: https://discussions.unity.com/t/how-to-get-sound-effect-to-play-for-event/568366/5
             AudioSource.PlayClipAtPoint(bought_item, transform.position);
         }
+
+        //play SFX for button press
+        audioManager.PlaySFX(audioManager.upgrade);
+        
         //Button + upgrade also need to disappear
         //Or could just change it to a different button that has a checkmark or something
     }
@@ -146,16 +164,18 @@ public class BuyUpgrade : MonoBehaviour
         //clear ability to buy with this button and reroll id
         clicked = false;
         if(button_id == 0){
-            if(!upgrade_table[1].bought){
+            if(!flood_script.SandbagCheck){
                 upgrade_id1 = 1;
-            }else if(upgrade_table[1].bought && !upgrade_table[0].bought){
+            }else if(flood_script.SandbagCheck && !flood_script.LeveeCheck){
                 upgrade_id1 = 0;
             }else{
+                upgrade_id1 = (int)Random.Range(2, max_id);
                 while(upgrade_table[upgrade_id1].bought == true || (upgrade_id1 == upgrade_id2) || (upgrade_id1 == upgrade_id3)){
                     upgrade_id1 = (int)Random.Range(2, max_id);
                 }
             }
         }else{
+            upgrade_id1 = (int)Random.Range(2, max_id);
             while(upgrade_table[upgrade_id1].bought == true || (upgrade_id1 == upgrade_id2) || (upgrade_id1 == upgrade_id3)){
                 upgrade_id1 = (int)Random.Range(2, max_id);
             }

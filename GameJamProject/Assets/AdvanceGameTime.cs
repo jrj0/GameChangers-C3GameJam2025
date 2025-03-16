@@ -9,9 +9,12 @@ public class AdvanceGameTime : MonoBehaviour
 
     public UnityEvent time_advance;
 
+    public AudioManager audioManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         //beginning of game, when sprite is first loaded in
         week = 0;
         //actually might want to ddelay this some
@@ -22,6 +25,7 @@ public class AdvanceGameTime : MonoBehaviour
             time_advance = new UnityEvent();
         }
         //time_advance.AddListener(ClearLocks);
+        
     }
 
 
@@ -32,8 +36,9 @@ public class AdvanceGameTime : MonoBehaviour
     }
 
     void OnMouseDown(){
+        audioManager.PlaySFX(audioManager.buttonLarge);
         //Advance Game Time by one week if not end of game
-        if(week < 12){
+        if(week < 11){
             //advance time
             week++;
             time_advance.Invoke();
