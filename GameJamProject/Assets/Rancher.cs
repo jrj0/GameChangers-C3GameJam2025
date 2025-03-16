@@ -107,5 +107,9 @@ static class Rancher  {
         randomizedDialogues.AddRange(joaquinDialogue);
         randomizedDialogues.AddRange(juliaDialogue);
         randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
     }
 }

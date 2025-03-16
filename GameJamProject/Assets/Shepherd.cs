@@ -103,5 +103,9 @@ static class Shepherd  {
         randomizedDialogues.AddRange(alejandroDialogue);
         randomizedDialogues.AddRange(juliaDialogue);
         randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
     }
 }

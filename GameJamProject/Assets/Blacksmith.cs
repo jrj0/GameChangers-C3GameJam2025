@@ -110,5 +110,9 @@ static class Blacksmith  {
         randomizedDialogues.AddRange(alejandroDialogue);
         randomizedDialogues.AddRange(juliaDialogue);
         randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
     }
 }

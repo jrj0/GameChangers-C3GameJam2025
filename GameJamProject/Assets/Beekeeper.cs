@@ -102,5 +102,9 @@ static class Beekeeper  {
         randomizedDialogues.AddRange(alejandroDialogue);
         randomizedDialogues.AddRange(joaquinDialogue);
         randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
     }
 }
