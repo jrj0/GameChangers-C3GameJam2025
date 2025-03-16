@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      IconHunger_0: -1759372182834134246
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,44 +1,61 @@
 using UnityEngine;
 using TMPro;
 
-public class DeleteBubble : MonoBehaviour
+public class ChatBubble : MonoBehaviour
 {
     private float timer = 0;
-    private const int LIVETIME = 1;
-    //private int lineWidth = 5;
-    //private int numberOfLines = 1;
-    private const int MAXLINEWIDTH = 0;
+    private int liveTime = 4;
     public Vector2 size;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //Dialogue options
-        string[] dialogues = {"small-test", "medium-test afeiofjowjweifj", "large-testj oifjow eao;jew;jf woeijfohweoughouwarghjwoiejfiohgo;awehoifj eowhgowrefj ;iewo;aijfgoi s;gilo ruwajfoiejoaw;oisdfjcldjksbnvdjkfnzxvcwalkejtuhto;faieljfakwjdnsj"};
-
+        
         // Sets the text in the chatBubble prefab. chatBubble -> TextMeshPro
-        TextMeshPro textObject = GetComponentInChildren<TextMeshPro>();
-        string dialogue = dialogues[Random.Range(0, dialogues.Length)];
+        TextMeshProUGUI textObject = GetComponentInChildren<TextMeshProUGUI>();
+        string dialogue = getDialogue();
 
-        // Code heavily inspired by https://www.youtube.com/watch?v=K13WnNL1OYM
+        // Code inspired by https://www.youtube.com/watch?v=K13WnNL1OYM
         textObject.text = dialogue;
         textObject.ForceMeshUpdate();
-        size = textObject.GetRenderedValues(true);
-        Vector2 padding = new Vector2(1, 1);
-        SpriteRenderer background = GetComponentInChildren<SpriteRenderer>();
-        background.size = size + padding;
-        Vector3 backgroundSize = background.gameObject.transform.position;
-        Vector3 offset = new Vector3(-1f * background.size[0], background.size[1], 0);
-        gameObject.transform.position = backgroundSize + offset;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < LIVETIME) {
+        if (timer < liveTime) {
             timer += Time.deltaTime;
         }
         else {
             Destroy(gameObject);
         }
+    }
+
+    // Get dialogue depending on the character
+    string getDialogue() {
+        string dialogue = "";
+        string[] dialogueOptions = new string[]{};
+        switch(gameObject.name) {
+            case "FarmerChatBubble(Clone)":
+                dialogue = Farmer.getDialogue();
+                liveTime = Farmer.liveTime;
+                break;
+            case "BlacksmithChatBubble(Clone)":
+                dialogue = Blacksmith.getDialogue();
+                liveTime = Blacksmith.liveTime;
+                break;
+            case "BeekeeperChatBubble(Clone)":
+                dialogue = Beekeeper.getDialogue();
+                liveTime = Beekeeper.liveTime;
+                break;
+            case "RancherChatBubble(Clone)":
+                dialogue = Rancher.getDialogue();
+                liveTime = Rancher.liveTime;
+                break;
+            case "ShepherdChatBubble(Clone)":
+                dialogue = Shepherd.getDialogue();
+                liveTime = Shepherd.liveTime;
+                break;
+        }
+        return dialogue;
     }
 }
