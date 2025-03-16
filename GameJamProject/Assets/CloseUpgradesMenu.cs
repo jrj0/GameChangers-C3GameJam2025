@@ -10,6 +10,8 @@ public class CloseUpgradesMenu : MonoBehaviour
     public GameObject buy_button;
     //public MeshRenderer renderer;
 
+    public AudioManager audioManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +21,8 @@ public class CloseUpgradesMenu : MonoBehaviour
         happiness_icon = GameObject.Find("Happiness Icon");
         money_icon = GameObject.Find("Money Symbol/Storage");
         buy_button = GameObject.Find("BuyButton0");
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -28,6 +32,7 @@ public class CloseUpgradesMenu : MonoBehaviour
     }
 
     void OnMouseDown(){
+        audioManager.PlaySFX(audioManager.closeUpgrade);
         //should open the upgrades menu - needs to load new scene + move some items to the menu scene
         //Specifically the meters + money need to move to a different scene
         SceneManager.MoveGameObjectToScene(health_icon, SceneManager.GetSceneByName("Town"));

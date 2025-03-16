@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      IconHeadphones_0: 8071341548926859910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -6,11 +6,13 @@ public class OpenUpgradesMenu : MonoBehaviour
 {
     public GameObject health_icon, food_icon, water_icon, happiness_icon, money_icon;
 
+    public AudioManager audioManager;
+
     //public MeshRenderer renderer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,8 @@ public class OpenUpgradesMenu : MonoBehaviour
     }
 
     void OnMouseDown(){
+        audioManager.PlaySFX(audioManager.openUpgrade);
+
         //should open the upgrades menu - needs to load new scene + move some items to the menu scene
         //Specifically the meters + money need to move to a different scene
         SceneManager.LoadScene("UpgradesOverlay", LoadSceneMode.Additive);
