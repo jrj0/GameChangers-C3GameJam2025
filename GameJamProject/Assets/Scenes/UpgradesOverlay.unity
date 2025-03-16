@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 222879978}
   - component: {fileID: 222879979}
   m_Layer: 0
-  m_Name: Buy_Button_0
+  m_Name: BuyButton0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,6 +225,9 @@ MonoBehaviour:
   food_storage: {fileID: 0}
   water_storage: {fileID: 0}
   happiness_storage: {fileID: 0}
+  upgrade_id: 0
+  clicked: 0
+  max_id: 0
 --- !u!61 &222879979
 BoxCollider2D:
   m_ObjectHideFlags: 0
