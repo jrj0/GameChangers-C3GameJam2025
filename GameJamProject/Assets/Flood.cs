@@ -31,7 +31,7 @@ public class Flood : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currTime.week == 4 && flood_sent == false){
+        if(currTime.week == 9 && flood_sent == false){
             SendFlood();
         }
     }

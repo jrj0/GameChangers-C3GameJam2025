@@ -18,6 +18,7 @@ public class MeterManager : MonoBehaviour
             value = 100;
         }else if(value < 0){
             value = 0;
+            //send some sort of message for early failure - how to do this?
         }
     }
 }
