@@ -131,7 +131,7 @@ public class BuyUpgrade : MonoBehaviour
         }
 
         //play SFX for button press
-        audioManager.PlaySFX(audioManager.buttonLarge);
+        audioManager.PlaySFX(audioManager.upgrade);
         
         //Button + upgrade also need to disappear
         //Or could just change it to a different button that has a checkmark or something
