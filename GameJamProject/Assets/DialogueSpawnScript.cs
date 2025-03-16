@@ -7,8 +7,8 @@ public class DialogueSpawnScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        spawnRate = 5;
-        timer = 4;
+        spawnRate = 2;
+        timer = 1;
     }
 
     // Update is called once per frame
@@ -18,9 +18,15 @@ public class DialogueSpawnScript : MonoBehaviour
             timer += Time.deltaTime;
         }
         else {
-            GameObject clone = Instantiate(bubble, new Vector3(transform.position[0] - 3.5f, transform.position[1] + 0.5f, 0), transform.rotation);
+            Vector2 clone_size = GetComponentInChildren<SpriteRenderer>().GetComponent<Renderer>().bounds.size;
+            Vector2 parent_size = gameObject.GetComponentInChildren<Renderer>().bounds.size / 2;
+            GameObject clone = CreateChatBubble(new Vector3(transform.position[0] - parent_size[0], transform.position[1] + parent_size[1], 0));
             clone.transform.parent = transform;
             timer = 0;
         }
+    }
+
+    GameObject CreateChatBubble(Vector3 size) {
+        return Instantiate(bubble, size, transform.rotation);
     }
 }
