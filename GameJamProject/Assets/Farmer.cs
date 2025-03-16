@@ -62,27 +62,16 @@ static class Farmer  {
     public static void setRandomizedDialogues() {
         string[] basicDialogue = new string[] {
             "Do you know Sam? I heard something not human used to live here...",
-            "Every morning I want to shout, 'Joaquín is ready for another day!'", 
             "The weather seems to be getting worse...",
             "I am very worried about my crops these days!",
-            "Did you know? My father was also a farmer!",
-            "Have you heard? My grandfather was a farmer!",
-            "Has anyone told you? My great-grandfather was a farmer!",
-            "Can you believe it? My family have been farmers for as long as I can remember!",
-            "I'll let you in on a secret...I started farming when I was just 5 years old!",
             "My children want to be farmers too. Unfortunately, the climate is changing...",
             "Is your study abroad going well? We don't get visitors often.",
             "Thank you for your interest and passion in helping our humble town!",
             "You should stop by my home for dinner sometime soon.",
-            "Have you eaten yet? Are you staying well?",
-            "An early morning to a late night outdoors is the best!",
-            "Are you getting enough outdoor time? If not, farm with me!",
             "I don't know much about life outside of the Sierra Nevada, but I enjoy it here!",
             "I'm glad that I learned English in my spare time, so that I could talk with you!",
-            "The early bird gets the worm!",
-            "The night owl is late to the harvest!",
-            "What's your favorite food? Let's have it together for dinner tonight!",
             "My least favorite season? It's definitely winter.",
+            "Wild boars and mountain goats keep eating my crops! Something needs to be done."
 
         };
 
@@ -116,18 +105,22 @@ static class Farmer  {
 
         string[] slightHintDialogue = new string[] {
             "I would like fertilizer, but it's not good for our community right now.",
+            "Wild boars and mountain goats keep eating my crops! Something needs to be done.",
             "Although I need water for my crops, the land tells me that we should invest more into having a surplus of water.",
-            "Come talk to me if you need help with anything! I know a lot about farming!",
-            "Life here is so nice! But the climate has changed so much recently, hopefully things get better!",
             "I am a farmer so I love crops and we never run out of food! Our freshwater reserves seem to never be enough, though.",
             "Everyone here really wants to protect our land, so make sure to give them a listen!",
-            "I heard a survey about our region was conducted recently! Expert researchers too, but I think our responses were more considerate."
+            "I heard a survey about our region was conducted recently! Expert researchers too, but I think our responses were more considerate.",
+            "I think the wild mountain goats keep coming here because there's water scarcity."
         };
         randomizedDialogues.AddRange(basicDialogue);
         randomizedDialogues.AddRange(javierDialogue);
         randomizedDialogues.AddRange(pabloDialogue);
         randomizedDialogues.AddRange(alejandroDialogue);
         randomizedDialogues.AddRange(juliaDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
         randomizedDialogues.AddRange(slightHintDialogue);
     }
 }

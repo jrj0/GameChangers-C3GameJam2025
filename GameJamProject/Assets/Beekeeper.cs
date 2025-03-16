@@ -63,12 +63,12 @@ static class Beekeeper  {
             "Today seems to be a peaceful day. Do you want to relax with me and the bees?",
             "Spring is my favorite season because the bees help produce such wonderful flowers!",
             "Did you know that honey is one of the few foods that never expire?",
-            "Just living in the mountains with my bees makes me happy. I don't need anything else.",
             "You asked if I prefer bees or people? Honestly...wait one moment, my bees need me.",
-            "Every morning I like walking around town and along the river.",
-            "As a child, I used to run around a lot more than now, but I still love nature just as much.",
             "So far, this season has been much worse than previous years.",
             "Do you know about the butterfly effect? If one drop of water falls into a lake will anyone notice? I personally think someone will notice.",
+            "My son has gotten sick. I think he ate some bad meat.",
+            "My son ate some bad meat the shepherd, the sheep might've been sick.",
+            "I think the water scarcity from the mountains make wild animals keep coming here to eat our crops and drink our water, and end up infecting the livestock."
 
         };
 
@@ -94,13 +94,21 @@ static class Beekeeper  {
 
         string[] slightHintDialogue = new string[] {
             "This too shall pass. I love this quote but maybe we can change something? I fear that this region is close to being devastated.",
-            "I've noticed recently that as a community, we are running low on freshwater. For this region, even a large surplus may not be enough."
+            "I've noticed recently that as a community, we are running low on freshwater. For this region, even a large surplus may not be enough.",
+            "My son has gotten sick. I think he ate some bad meat.",
+            "My son ate some bad meat the shepherd, the sheep might've been sick.",
+            "I think the water scarcity from the mountains make wild animals keep coming here to eat our crops and drink our water, and end up infecting the livestock."
+
         };
         randomizedDialogues.AddRange(basicDialogue);
         randomizedDialogues.AddRange(javierDialogue);
         randomizedDialogues.AddRange(pabloDialogue);
         randomizedDialogues.AddRange(alejandroDialogue);
         randomizedDialogues.AddRange(joaquinDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
+        randomizedDialogues.AddRange(slightHintDialogue);
         randomizedDialogues.AddRange(slightHintDialogue);
     }
 }
