@@ -1,4 +1,6 @@
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
 //using Mono.Cecil;
 using TMPro;
 //using UnityEditor.Rendering.Universal;
@@ -41,6 +43,8 @@ public class BuyUpgrade : MonoBehaviour
     public GameObject background;
     public AdvanceGameTime currTime;
     public Flood flood_script;
+
+    public TMP_Text upgrade1desc, upgrade1name, upgrade1cost;
     
     public Upgrade[] upgrade_table = {
         new Upgrade("Levee Construction", "Constructing a levee on rivers close to the town can help mitigate the effects of flooding in the longterm", 700, 0, 0, 0, 0),
@@ -56,7 +60,9 @@ public class BuyUpgrade : MonoBehaviour
 
     //public TMP_Text name_text, description_text;
 
-    public int upgrade_id;
+    public GameObject button2, button3;
+    public BuyUpgrade button2_script, button3_script;
+    public int upgrade_id1, upgrade_id2, upgrade_id3;
 
     public bool clicked = false;
 
@@ -89,29 +95,32 @@ public class BuyUpgrade : MonoBehaviour
 
         //At the moment just grabs a random id from the list of upgrades - some of them need to have
         //additional qualifiers however + probably buckets of different costs
-        upgrade_id = (int)Random.Range(0, max_id);
+        upgrade_id1 = (int)Random.Range(0, max_id);
+        upgrade_id2 = button2_script.upgrade_id1;
+        upgrade_id3 = button3_script.upgrade_id1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //name_text.text = upgrade_table[upgrade_id].Name;
-        //description_text.text = upgrade_table[upgrade_id].Description;
+        upgrade1name.text = upgrade_table[upgrade_id1].Name;
+        upgrade1desc.text = upgrade_table[upgrade_id1].Description;
+        upgrade1cost.text = upgrade_table[upgrade_id1].cost.ToString();
     }
 
     void OnMouseDown(){
         //Need to identify the requirements for each upgrade to appear
-        if(monies.money >= upgrade_table[upgrade_id].cost && upgrade_table[upgrade_id].bought == false && clicked == false){
-            health.value += upgrade_table[upgrade_id].health_effect;
-            food.value += upgrade_table[upgrade_id].food_effect;
-            water.value += upgrade_table[upgrade_id].water_effect;
-            happiness.value += upgrade_table[upgrade_id].happiness_effect;
-            monies.money -= upgrade_table[upgrade_id].cost;
-            upgrade_table[upgrade_id].bought = true;
+        if(monies.money >= upgrade_table[upgrade_id1].cost && upgrade_table[upgrade_id1].bought == false && clicked == false){
+            health.value += upgrade_table[upgrade_id1].health_effect;
+            food.value += upgrade_table[upgrade_id1].food_effect;
+            water.value += upgrade_table[upgrade_id1].water_effect;
+            happiness.value += upgrade_table[upgrade_id1].happiness_effect;
+            monies.money -= upgrade_table[upgrade_id1].cost;
+            upgrade_table[upgrade_id1].bought = true;
             clicked = true;
-            if(upgrade_id == 0){
+            if(upgrade_id1 == 0){
                 flood_script.LeveeCheck = true;
-            }else if(upgrade_id == 1){
+            }else if(upgrade_id1 == 1){
                 flood_script.SandbagCheck = true;
             }
         }
@@ -122,8 +131,8 @@ public class BuyUpgrade : MonoBehaviour
     void ClearLocks(){
         //clear ability to buy with this button and reroll id
         clicked = false;
-        while(upgrade_table[upgrade_id].bought == true){
-            upgrade_id = (int)Random.Range(0, max_id);
+        while(upgrade_table[upgrade_id1].bought == true || (upgrade_id1 == upgrade_id2) || (upgrade_id1 == upgrade_id3)){
+            upgrade_id1 = (int)Random.Range(0, max_id);
         }
     }
 }

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +6,9 @@ public class CloseUpgradesMenu : MonoBehaviour
 {
 
     public GameObject health_icon, food_icon, water_icon, happiness_icon, money_icon;
+
+    public GameObject buy_button;
+    //public MeshRenderer renderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +18,7 @@ public class CloseUpgradesMenu : MonoBehaviour
         water_icon = GameObject.Find("Water Icon");
         happiness_icon = GameObject.Find("Happiness Icon");
         money_icon = GameObject.Find("Money Symbol/Storage");
+        buy_button = GameObject.Find("BuyButton0");
     }
 
     // Update is called once per frame
@@ -33,5 +38,9 @@ public class CloseUpgradesMenu : MonoBehaviour
 
         //unload scene last
         SceneManager.UnloadSceneAsync("UpgradesOverlay");
+        //buy_button.SetActive(false);
+        //renderer.enabled = false;
+        
+
     }
 }
