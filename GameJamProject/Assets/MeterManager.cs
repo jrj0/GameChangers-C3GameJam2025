@@ -11,7 +11,7 @@ public class MeterManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        value = 60;
+        value = 70;
         next_week = GameObject.Find("Next_Week_Button_0");
         currTime = next_week.GetComponent<AdvanceGameTime>();
         currTime.time_advance.AddListener(MeterDrop);

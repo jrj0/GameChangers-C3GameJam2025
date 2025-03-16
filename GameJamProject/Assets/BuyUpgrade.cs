@@ -150,6 +150,10 @@ public class BuyUpgrade : MonoBehaviour
                 upgrade_id1 = 1;
             }else if(upgrade_table[1].bought && !upgrade_table[0].bought){
                 upgrade_id1 = 0;
+            }else{
+                while(upgrade_table[upgrade_id1].bought == true || (upgrade_id1 == upgrade_id2) || (upgrade_id1 == upgrade_id3)){
+                    upgrade_id1 = (int)Random.Range(2, max_id);
+                }
             }
         }else{
             while(upgrade_table[upgrade_id1].bought == true || (upgrade_id1 == upgrade_id2) || (upgrade_id1 == upgrade_id3)){
