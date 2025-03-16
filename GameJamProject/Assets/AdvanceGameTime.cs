@@ -33,7 +33,7 @@ public class AdvanceGameTime : MonoBehaviour
 
     void OnMouseDown(){
         //Advance Game Time by one week if not end of game
-        if(week < 12){
+        if(week < 11){
             //advance time
             week++;
             time_advance.Invoke();
