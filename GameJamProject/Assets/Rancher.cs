@@ -60,15 +60,11 @@ static class Rancher  {
     // Should be called at the start of each week
     public static void setRandomizedDialogues() { //TODO rancher dialogue
         string[] basicDialogue = new string[] {
-            ".........I DECLARE THAT TODAY WILL BE A GREAT DAY!",
             "It's time for MOO-RNING song cows!",
-            "Oh it's you. Would you like to help out with cow milking?",
             "COWS! Let's have a good milking session today!",
             "Sometimes I like to stand at a mountain peak and echo my voice",
             "Many people know of my cows, but only a few can recall all of their names.",
-            "Everyone here is kind. I hope that we can keep living here together.",
-            "Let's see where the wind will take me today!"
-
+            "Why are there more wild boars and mountain goats here recently?"
 
         };
 
@@ -99,7 +95,11 @@ static class Rancher  {
         string[] slightHintDialogue = new string[] {
             "Unfortunately my cows are running low on water and so am I.",
             "Outsiders may believe that happiness and food are our greatest problems, but I actually think it's water.",
-            "Based off my observations, sandbags will be very important in the near future."
+            "Based off my observations, sandbags will be very important in the near future.",
+            "Why are there more wild boars and mountain goats here recently?",
+            "Did you see the sheep are getting sick? I'm worried the same thing will happen to my cows.",
+            "I think the water scarcity from the mountains make wild animals keep coming here to eat our crops and drink our water, and end up infecting the livestock."
+
         };
         randomizedDialogues.AddRange(basicDialogue);
         randomizedDialogues.AddRange(javierDialogue);

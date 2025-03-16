@@ -63,16 +63,11 @@ static class Blacksmith  {
             "For the best tools near Sierra Mountain, come to me.",
             "Can I interest you in my handmade hammer? It's made of the best materials and with masterful techniques.",
             "I am content just working at my workshop all day.",
-            "Have you met all the townsfolk yet? I'm sure that you will find all of us favorable.",
             "I enjoy living in the mountains...it's unfortunate that the climate is getting worse.",
             "Tools are important. They enable humans to become super.",
-            "Have you walked around town yet? There are many beautiful details or so I hear.",
+            "They might have to slaughter Pablo's best lamb, he got infected from a wild boar.",
             "Do you know what cascading means? For tools, a small chip can easily lead to larger damages.",
             "Thanks for your interest in our town. Your help means a lot to all of us!",
-            "This town's children are nice, but I don't interact with them too much.",
-            "The waterfall's sounds are nice. I would like to hear it while working.",
-            "Did you break any tool? Let me analyze and repair it.",
-            "Every day you should work hard and strike while the iron is hot."
 
         };
 
@@ -102,7 +97,10 @@ static class Blacksmith  {
 
         string[] slightHintDialogue = new string[] {
             "I heard about a survey where experts said the Sierra Mountain region struggles with crops, but I think others in this community have a different opinion.",
-            "Even though I don't know much about climate change, I know it's affecting Monachil and it's getting worse."
+            "Even though I don't know much about climate change, I know it's affecting Monachil and it's getting worse.",
+            "You should invest more in pesticides.",
+            "They might have to slaughter Pablo's best lamb, he got infected from a wild boar."
+            
         };
         randomizedDialogues.AddRange(basicDialogue);
         randomizedDialogues.AddRange(joaquinDialogue);

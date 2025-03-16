@@ -61,16 +61,13 @@ static class Shepherd  {
     public static void setRandomizedDialogues() { //TODO Shepherd dialogue
         string[] basicDialogue = new string[] {
             ".............................Oh, were you here the whole time?",
-            "Would you like to look at the sheep? They are kind.",
             "I like the sheep because they are nice to me.",
             "I don't think so.",
             "I'd agree with that.",
             "Maybe.",
-            "Sheep are wonderful creatures, right?",
             "Sometimes, I don't know what to say.",
             "Did you see it? A lamb was just born!",
             "I'm a shepherd because I like being around sheep.",
-            "In my family, I'm the only shepherd."
         };
 
         string[] javierDialogue = new string[] {
@@ -95,7 +92,10 @@ static class Shepherd  {
 
         string[] slightHintDialogue = new string[] {
             "Hello Joaquín, have you noticed the water scarcity in recent times? I think we should be prepared.",
-            "My food supply looks a little low, but I should also make sure that I conserve water."
+            "My food supply looks a little low, but I should also make sure that I conserve water.",
+            "These wild boars and mountain goats keep coming down here to eat our crops and drink our water, my sheep are getting sick!",
+            "Why are there more wild boars and mountain goats here recently?"
+            
         };
         randomizedDialogues.AddRange(basicDialogue);
         randomizedDialogues.AddRange(javierDialogue);
