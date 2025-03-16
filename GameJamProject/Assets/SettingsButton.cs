@@ -1,7 +1,10 @@
-﻿using System;
-public class NewClass
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class SettingsButton : MonoBehaviour
 {
-    public NewClass()
+    public void GoToSettings()
     {
+        SceneManager.LoadScene("SettingsScreen");
     }
 }
