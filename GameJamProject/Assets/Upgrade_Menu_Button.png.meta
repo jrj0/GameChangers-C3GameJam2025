@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Upgrade_Menu_Button_0: -8877670020511041654
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,11 +1,11 @@
 using System.ComponentModel;
-using Mono.Cecil;
+//using Mono.Cecil;
 using TMPro;
-using UnityEditor.Rendering.Universal;
+//using UnityEditor.Rendering.Universal;
 using UnityEngine;
 
 //This struct may need to be updated to account for additional effects (chance of flooding stuff)
-struct Upgrade {
+public struct Upgrade {
 
     public Upgrade(string name, string descript, int money, int health, int food, int water, int happy){
         Name = name;
@@ -15,6 +15,7 @@ struct Upgrade {
         food_effect = food;
         water_effect = water;
         happiness_effect = happy;
+        bought = false;
     }
     public string Name;
     public string Description;
@@ -23,6 +24,7 @@ struct Upgrade {
     public int food_effect;
     public int water_effect;
     public int happiness_effect;
+    public bool bought;
 };
 
 public class BuyUpgrade : MonoBehaviour
@@ -35,13 +37,20 @@ public class BuyUpgrade : MonoBehaviour
     private MoneyManager monies;
     private MeterManager health, food, water, happiness;
 
-    public GameObject money_storage, health_storage, food_storage, water_storage, happiness_storage;
-
-    private Upgrade[] upgrade_table = {
+    public GameObject money_storage, health_storage, food_storage, water_storage, happiness_storage, next_week;
+    public GameObject background;
+    public AdvanceGameTime currTime;
+    public Flood flood_script;
+    
+    public Upgrade[] upgrade_table = {
+        new Upgrade("Levee Construction", "Constructing a levee on rivers close to the town can help mitigate the effects of flooding in the longterm", 700, 0, 0, 0, 0),
+        new Upgrade("Sandbags", "Adding sandbags along a river can help in case of a short term flooding event", 200, 0, 0, 0, 0),
         new Upgrade("Rainfall Barrels", "Rainfall barrels help capture rainfall during the rarer, heavy rainfalls, so that there is increased water available during drought periods", 100, 0, 0, 15, 0),
         new Upgrade("Veterinary Supplies", "Additional veterinary supplies will help town farmers take care of their livestock, increasing food production", 250, 0, 15, 0, 0),
         new Upgrade("Medical Supplies", "Medical supplies are necessary to help maintain the townspeople's health", 250, 15, 0, 0, 0),
-        new Upgrade("Irrigation Canals", "Developing and maintaining irrigation canals will help distribute freshwater for crops, but reduce the amount of available water", 200, 0, 15, -5, 0)
+        new Upgrade("Irrigation Canals", "Developing and maintaining irrigation canals will help distribute freshwater for crops, but reduce the amount of available water", 200, 0, 15, -5, 0),
+        new Upgrade("Increase Fertilizer Usage", "Fertilizer can help crops grow faster and be more productive, but it can also have negative effects on the water supply", 150, 0, 15, -5, 0),
+        new Upgrade("Increase Freshwater Storage", "Adding increased freshwater storage will help the town's water supply, but it may also limit how much water is immediately available for crops and animals", 150, 0, -5, 15, 0)
     }; //this value will need to ba changed to keep up with number of upgrades
 
 
@@ -63,12 +72,18 @@ public class BuyUpgrade : MonoBehaviour
         water_storage = GameObject.Find("Water Icon");
         happiness_storage = GameObject.Find("Happiness Icon");
         money_storage = GameObject.Find("Money Symbol/Storage");
+        next_week = GameObject.Find("Next_Week_Button_0");
+        background = GameObject.Find("CC_bg_0");
     
         monies = money_storage.GetComponent<MoneyManager>();
         health = health_storage.GetComponent<MeterManager>();
         food = food_storage.GetComponent<MeterManager>();
         water = water_storage.GetComponent<MeterManager>();
         happiness = happiness_storage.GetComponent<MeterManager>();
+        currTime = next_week.GetComponent<AdvanceGameTime>();
+        flood_script = background.GetComponent<Flood>();
+
+        currTime.time_advance.AddListener(ClearLocks);
 
         //Need to do a lot of work with this to properly import all of the content + generate ids well
 
@@ -86,15 +101,29 @@ public class BuyUpgrade : MonoBehaviour
 
     void OnMouseDown(){
         //Need to identify the requirements for each upgrade to appear
-        if(monies.money >= upgrade_table[upgrade_id].cost && clicked == false){
+        if(monies.money >= upgrade_table[upgrade_id].cost && upgrade_table[upgrade_id].bought == false && clicked == false){
             health.value += upgrade_table[upgrade_id].health_effect;
             food.value += upgrade_table[upgrade_id].food_effect;
             water.value += upgrade_table[upgrade_id].water_effect;
             happiness.value += upgrade_table[upgrade_id].happiness_effect;
             monies.money -= upgrade_table[upgrade_id].cost;
+            upgrade_table[upgrade_id].bought = true;
             clicked = true;
+            if(upgrade_id == 0){
+                flood_script.LeveeCheck = true;
+            }else if(upgrade_id == 1){
+                flood_script.SandbagCheck = true;
+            }
         }
         //Button + upgrade also need to disappear
         //Or could just change it to a different button that has a checkmark or something
+    }
+
+    void ClearLocks(){
+        //clear ability to buy with this button and reroll id
+        clicked = false;
+        while(upgrade_table[upgrade_id].bought == true){
+            upgrade_id = (int)Random.Range(0, max_id);
+        }
     }
 }

@@ -1,13 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class AdvanceGameTime : MonoBehaviour
 {
 
-    int week;
+    public int week;
 
-    public BuyUpgrade upgrade_buyer;
-    public GameObject upgrade_button;
+    public UnityEvent time_advance;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,14 +18,12 @@ public class AdvanceGameTime : MonoBehaviour
         while(!SceneManager.GetSceneByName("Town").isLoaded){
 
         }
-        upgrade_button = GameObject.Find("BuyButton0");
-        upgrade_buyer = upgrade_button.GetComponent<BuyUpgrade>();
+        if(time_advance == null){
+            time_advance = new UnityEvent();
+        }
+        //time_advance.AddListener(ClearLocks);
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode){
-        upgrade_button = GameObject.Find("BuyButton0");
-        upgrade_buyer = upgrade_button.GetComponent<BuyUpgrade>();
-    }
 
     // Update is called once per frame
     void Update()
@@ -38,10 +36,7 @@ public class AdvanceGameTime : MonoBehaviour
         if(week < 12){
             //advance time
             week++;
-            //clear locks on buying items
-            upgrade_buyer.clicked = false;
-            //reroll upgrade - this will likely need to be reworked later
-            upgrade_buyer.upgrade_id = (int)Random.Range(0, upgrade_buyer.max_id);
+            time_advance.Invoke();
             //probably also need to add money
         }else{
             //End the game
