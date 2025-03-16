@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pause Button-1.png_0: -3678366410319361858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

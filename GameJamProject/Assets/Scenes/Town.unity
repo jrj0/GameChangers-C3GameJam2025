@@ -2066,8 +2066,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 850, y: -375}
-  m_SizeDelta: {x: 100, y: 60}
+  m_AnchoredPosition: {x: 800, y: -375}
+  m_SizeDelta: {x: 150, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &935967950
 MonoBehaviour:
@@ -4186,6 +4186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
+  next_week: {fileID: 0}
+  currTime: {fileID: 0}
 --- !u!1 &2032011736
 GameObject:
   m_ObjectHideFlags: 0
@@ -4910,3 +4912,4 @@ SceneRoots:
   - {fileID: 656109656}
   - {fileID: 1836107078}
   - {fileID: 2032011739}
+  - {fileID: 970676465}
