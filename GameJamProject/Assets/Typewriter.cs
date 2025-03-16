@@ -28,7 +28,7 @@ public class Typewriter : MonoBehaviour
 
     public void TypewriterEffect()
     {
-        if (textRatio % 7 == 0)
+        if (textRatio % 4 == 0)
         {
             if (textUI != null && fullText != null && fullText.Length > 0)
             {

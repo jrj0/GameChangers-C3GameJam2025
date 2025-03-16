@@ -18,6 +18,7 @@ public class ReturnHome : MonoBehaviour
     void OnMouseDown()
     {
         SceneManager.LoadScene("HomePage");
+        SceneManager.UnloadSceneAsync("SettingsScreen");
         SceneManager.UnloadSceneAsync("EndScreen");
     }
 }

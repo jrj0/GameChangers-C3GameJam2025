@@ -1,15 +1,14 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class VolumeSettings : MonoBehaviour
+public class NewMonoBehaviour : MonoBehaviour
 {
     [SerializeField] Slider volumeSlider;
     // Use this for initialization
     void Start()
     {
-        if (!PlayerPrefs.HasKey("musicVolume"))
+        if(!PlayerPrefs.HasKey("musicVolume"))
         {
             PlayerPrefs.SetFloat("musicVolume", 1);
             Load();
